@@ -37,6 +37,7 @@
     }, 200);
     sr.reveal('.sr-button', {
         duration: 1000,
+        reset: true,
         delay: 200
     });
     sr.reveal('.sr-contact', {
@@ -44,6 +45,24 @@
         scale: 0.3,
         distance: '0px'
     }, 300);
+    sr.reveal('.section-heading', {
+        duration: 600,
+        scale: 0.5,
+        reset: true,
+        delay: 400
+    });
+    sr.reveal('.desc', {
+        duration: 600,
+        scale: 0.5,
+        reset: true,
+        delay: 800
+    });
+    sr.reveal('.screenshot', {
+        duration: 600,
+        scale: 0.5,
+        reset: true,
+        delay: 1000
+    });
 
     // Initialize and Configure Magnific Popup Lightbox Plugin
     $('.popup-gallery').magnificPopup({
