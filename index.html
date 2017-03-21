@@ -324,6 +324,24 @@
 
                 <p>Not currently, but we have developed a method to measure motion during structural data acquisition and plan to include it in an upcoming release.</p>
 
+                <h3>How do I stream DICOMs?</h3>
+
+                <p><strong>Requirements:</strong></br>
+                Correct permissions on scanner computer</br>
+                SAMBA access through firewall to FIRMM host PC</br>
+                Recommended: restrict network traffic between scanner PC and FIRMM host PC</p>
+
+                <p>When the FIRMM installation script is run, it will add two Windows batch files to the incoming DICOM folder on the FIRMM machine. They are called <code>FIRMM_session_start.bat</code> and <code>FIRMM_session_stop.bat</code>. When you are first mapping the drive from the scanner, copy them over to the FIRMM host PC.</p>
+
+                <p>Create shortcuts for these two files, e.g. on the Windows start menu. Once you have created the shortcuts, be sure to test them. The operator can then conveniently start and stop DICOM streaming during the imaging session by selecting the shortcuts to these .bat files.</p>
+
+                <h3>Can I revert to a previously installed version of FIRMM if needed?</h3>
+
+                <p>Users can revert to a previous version of FIRMM if the minor version is the same (e.g. reverting from 2.1.1 to 2.1.0). This would normally occur only if a bugfix that was introduced within the minor version caused problems running FIRMM on the user's system.</p>
+
+                <p>To revert to a previous version, find the previous version of the <code>run.sh</code> file that was created by the FIRMM automatic updater. It will be stored in the same directory as your current <code>run.sh</code> and its name will contain the previous version number (e.g. <code>run.sh.2.1.0</code>). Re-save that previous file under the name <code>run.sh</code>, replacing or removing your current file. Then you can run FIRMM commands as normal and the desired version will be used.</p>
+
+
                 <h3>I'm just testing the height properties....</h3>
 
                 <p>test</p>
