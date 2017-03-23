@@ -192,23 +192,11 @@ header .header-content .header-content-inner p {
 .section-heading {
   margin-top: 0;
 }
-.service-box {
-  max-width: 400px;
-  margin: 50px 0;
-}
+
 .portfolio-pic {
   border-radius: 50%;
 }
 
-@media (min-width: 992px) {
-  .service-box {
-    margin: 20px 0;
-    display: block;
-  }
-}
-.service-box p {
-  margin-bottom: 0;
-}
 .portfolio-box {
   position: relative;
   display: block;
