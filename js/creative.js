@@ -30,7 +30,7 @@
 
     // Initialize and Configure Scroll Reveal Animation
     window.sr = ScrollReveal();
-    sr.reveal('.section-heading', {
+    sr.reveal('.head', {
         duration: 400,
         scale: 0.5,
         reset: true,
@@ -43,6 +43,12 @@
         delay: 200
     });
     sr.reveal('.screenshot', {
+        duration: 400,
+        scale: 0.5,
+        reset: true,
+        delay: 300
+    });
+    sr.reveal('.downloadnow', {
         duration: 400,
         scale: 0.5,
         reset: true,
