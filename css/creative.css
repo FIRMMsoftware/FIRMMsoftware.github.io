@@ -298,3 +298,10 @@ div.features > div.row > div {
 div.features > div.row > div:nth-of-type(even) {
     box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.1);
 }
+
+#download {
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px; 
+}
