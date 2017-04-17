@@ -286,3 +286,15 @@ body {
 .full-section {
   min-height: 100%;
 }
+
+
+div.features > div.row > div {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
+}
+
+div.features > div.row > div:nth-of-type(even) {
+    box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.1);
+}
