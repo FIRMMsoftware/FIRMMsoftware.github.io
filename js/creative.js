@@ -28,47 +28,30 @@
         }
     })
 
-    // Initialize and Configure Scroll Reveal Animation
-    window.sr = ScrollReveal();
-    sr.reveal('.head', {
-        duration: 400,
-        scale: 0.5,
-        reset: true,
-        delay: 100
-    });
-    sr.reveal('.desc', {
-        duration: 400,
-        scale: 0.5,
-        reset: true,
-        delay: 200
-    });
-    sr.reveal('.screenshot', {
-        duration: 400,
-        scale: 0.5,
-        reset: true,
-        delay: 300
-    });
-    sr.reveal('.downloadnow', {
-        duration: 400,
-        scale: 0.5,
-        reset: true,
-        delay: 300
+    // check scroll
+    function checkScroll() {
+        var startY = 100;
+        if($(window).scrollTop() > startY) {
+            $("#mini-logo").attr("src","img/FIRMM_logo_grey_nav.png");
+        }
+        else {
+            $("#mini-logo").attr("src","img/FIRMM_logo_grey_nav_invert.png");
+        }
+    }
+
+    // Check scroll
+    $(window).on("scroll load resize", function() {
+        checkScroll();
     });
 
-    // Initialize and Configure Magnific Popup Lightbox Plugin
-    $('.popup-gallery').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        tLoading: 'Loading image #%curr%...',
-        mainClass: 'mfp-img-mobile',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-        },
-        image: {
-            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-        }
+    // Initialize and Configure Scroll Reveal Animation
+    window.sr = ScrollReveal();
+    sr.reveal('.about', {
+        duration: 300,
+        scale: 0.5,
+        reset: true,
+        viewFactor: 0.1,
+        delay: 50
     });
 
 })(jQuery); // End of use strict
