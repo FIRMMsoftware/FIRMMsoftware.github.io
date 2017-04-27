@@ -28,21 +28,21 @@
         }
     })
 
-    // check scroll
-    function checkScroll() {
-        var startY = 100;
-        if($(window).scrollTop() > startY) {
-            $("#mini-logo").attr("src","img/FIRMM_logo_grey_nav.png");
-        }
-        else {
-            $("#mini-logo").attr("src","img/FIRMM_logo_grey_nav_invert.png");
-        }
-    }
+    // // check scroll
+    // function checkScroll() {
+    //     var startY = 100;
+    //     if($(window).scrollTop() > startY) {
+    //         $("#mini-logo").attr("src","img/FIRMM_logo_grey_nav.png");
+    //     }
+    //     else {
+    //         $("#mini-logo").attr("src","img/FIRMM_logo_grey_nav_invert.png");
+    //     }
+    // }
 
-    // Check scroll
-    $(window).on("scroll load resize", function() {
-        checkScroll();
-    });
+    // // Check scroll
+    // $(window).on("scroll load resize", function() {
+    //     checkScroll();
+    // });
 
     // Initialize and Configure Scroll Reveal Animation
     window.sr = ScrollReveal();
