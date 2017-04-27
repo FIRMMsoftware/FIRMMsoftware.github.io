@@ -50,11 +50,11 @@ aside {
   -moz-transition: all 0.35s;
   transition: all 0.35s;
 }
-/*.navbar-default .navbar-header .navbar-brand {
+.navbar-default .navbar-header .navbar-brand {
   font-weight: 700;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7);
-}*/
+}
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
   color: white;
