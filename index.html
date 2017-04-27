@@ -243,7 +243,7 @@
 
                 <h3>How do I test FIRMM?</h3>
 
-                <p>After connecting to the FIRMM host computer via <code>ssh -X firmm_host</code> (where firmm_host is your FIRMM Linux system's name), run <code>FIRMM -t</code>. This will start FIRMM on the <code>firmm_host</code> computer and copy a few test DICOM series to the incoming DICOM directory specified in the settings. Remember to click <strong>Start FIRMM</strong> in the browser window.  FIRMM will close automatically when the test is finished.</p>
+                <p>After connecting to the FIRMM host computer via <code>ssh -X firmm_host</code> (where firmm_host is your FIRMM Linux system's name), run <code>FIRMM -t</code>. This will start FIRMM on the <code>firmm_host</code> computer and copy a few test DICOM series to the incoming DICOM directory specified in the settings. Remember to click <code>Start FIRMM</code> in the browser window.  FIRMM will close automatically when the test is finished.</p>
 
                 <h3>How do I change the FD thresholds?</h3>
 
@@ -267,6 +267,11 @@
                     <li>Dell Optiplex running Ubuntu 14 (i5 processor, 4GB RAM, 1TBHDD) with Siemens Skyra scanner</li>
                     <li>Core i7-4790K (16GB RAM, SSD) with Siemens Prisma scanner</li>
                 </ul>
+
+                <h3>Why does FIRMM occasionally start processing a previous session when I start it?</h3>
+
+                <p>When FIRMM is launched, it looks for the latest directory in the DICOM streaming directory to process. If FIRMM is launched within 10 minutes of the conclusion of a <strong>previous</strong> scanning session for which DICOMs were sent to FIRMM, and no DICOMs from the <strong>current</strong> session have been sent yet, it will see the <strong>previous</strong> session as "new" and start processing it. To remedy this, close FIRMM and re-launch it <strong>after</strong> some DICOMs have been sent for your current session. These can be any DICOMs, e.g. localizer, AAscout, T1, etc. FIRMM will see the new folder and wait for types of scans it can process (EPI, BOLD, etc.).</p>
+
             </div>
         </div>
     </aside>
