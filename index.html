@@ -92,10 +92,10 @@
                     <h2 class="section-heading">The problem</h2>
                     <hr class="light">
                     <p class="text-faded">Some subjects make it easy to collect high quality data...</p>
-                    <img class="img-responsive img-rounded" src="img/lowmover.png" alt="Low movement data as displayed in FIRMM">
+                    <img class="img-responsive img-rounded" src="img/low_mover.gif" alt="Low movement data as displayed in FIRMM">
                     <br>
                     <p class="text-faded">... and some really don't.</p>
-                    <img class="img-responsive img-rounded" src="img/highmover.png" alt="High movement data as displayed in FIRMM">
+                    <img class="img-responsive img-rounded" src="img/high_mover.gif" alt="High movement data as displayed in FIRMM">
                     <br>
                 </div>
             </div>
@@ -268,7 +268,7 @@
                     <li>Core i7-4790K (16GB RAM, SSD) with Siemens Prisma scanner</li>
                 </ul>
 
-                <h3>Why does FIRMM occasionally start processing a previous session when I start it?</h3>
+                <h3>Why does FIRMM occasionally start processing a previous session when I start it?[p';'0</h3>
 
                 <p>When FIRMM is launched, it looks for the latest directory in the DICOM streaming directory to process. If FIRMM is launched within 10 minutes of the conclusion of a <strong>previous</strong> scanning session for which DICOMs were sent to FIRMM, and no DICOMs from the <strong>current</strong> session have been sent yet, it will see the <strong>previous</strong> session as "new" and start processing it. To remedy this, close FIRMM and re-launch it <strong>after</strong> some DICOMs have been sent for your current session. These can be any DICOMs, e.g. localizer, AAscout, T1, etc. FIRMM will see the new folder and wait for types of scans it can process (EPI, BOLD, etc.).</p>
 
