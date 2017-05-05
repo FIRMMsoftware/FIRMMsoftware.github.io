@@ -310,3 +310,14 @@ div.features > div.row > div {
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
     background-color: #000;
 }
+
+div.features > div {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
+}
+
+div.features > div:nth-of-type(odd) {
+    box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.1);
+} 
