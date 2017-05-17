@@ -225,62 +225,50 @@
         <div class="container">
             <div class="call-to-action">
                 <h2 class="text-center section-heading">Frequently Asked Questions</h2>
+                    <p><h3>Does FIRMM store DICOMs?</h3></p>
 
-                <h3>What are the system requirements for running FIRMM?</h3>
-                <p>The only hardware requirement for running FIRMM is a Docker-capable Linux computer networked to the computer running the scanner operating system, which is already part of the typical setup for MRI scanners used in research. The FIRMM software is self-contained in a Docker image and does not require licenses or the installation of other software packages. FIRMM has been most extensively used with a self-built computer running Linux (Ubuntu 14.04 LTS) and the following hardware specifications: CPU = Intel Core i7-4790K 4.0 GHz Quad-core, motherboard = ASUS Z97M-PLUS, memory = 16 GBDDR3, hard drive = Samsung 850 EVO 120GB and graphics = GPU NVIDIA GTX 960.</p>
+                    <p>Any DICOMs used by FIRMM will be automatically deleted from the FIRMM computer after two days. Therefore, it is <strong>very important</strong> that users never count on FIRMM for long term data storage.</p>
 
-                <h3>How do I get data from my scanner to FIRMM?</h3>
+                    <p><strong>How do I get data from my scanner to FIRMM?</strong></p>
 
-                <p><strong>Requirements:</strong></br>
-                Correct permissions on scanner computer</br>
-                SAMBA access through firewall to FIRMM host PC</br>
-                Recommended: restrict network traffic between scanner PC and FIRMM host PC</p>
+                    <p>To use FIRMM effectively, DICOMs need to be transferred as fast as possible to the incoming DICOM directory on the FIRMM host computer.</p>
+                    <ul>
+                        <li><strong>SIEMENS:</strong> Set up and run <code>ideacmdtool</code> on your scanner. Instructions for this can be requested from <a href="mailto:FIRMMsoftware@gmail.com">our team</a>.</li>
+                        <li><strong>GE:</strong> Please contact us for help.</li>
+                        <li><strong>PHILIPS:</strong> Please contact us for help.</li>
+                    </ul>
+                    <p>When the FIRMM installation script is run, it will add two Windows batch files to the incoming DICOM folder on the FIRMM machine. They are called <code>FIRMM_session_start.bat</code> and <code>FIRMM_session_stop.bat</code>. When you are first mapping the drive from the scanner, copy them over to the FIRMM host PC.</p>
+                    <p>Create shortcuts for these two files, e.g. on the Windows start menu. Once you have created the shortcuts, be sure to test them. The operator can then conveniently start and stop DICOM streaming during the imaging session by selecting the shortcuts to these .bat files.</p>
 
-                <p>To use FIRMM effectively, DICOMs need to be transferred as fast as possible to the incoming DICOM directory on the FIRMM host computer.</p>
+                    <p><h3>Does FIRMM work with GE or PHILIPS scanners?</h3></p>
 
-                <p>SIEMENS: Set up and run <code>ideacmdtool</code> on your scanner.  Instructions for this can be <a href="mailto:FIRMMsoftware@gmail.com">requested from our team</a>.</p>
+                    <p> FIRMM is designed to work with any scanner as long as DICOM data can be sent to a SAMBA shared network directory on the FIRMM host computer.</p>
 
-                <p>GE: Please contact us for help.</p>
+                    <p><h3>How do I test FIRMM?</h3></p>
 
-                <p>PHILIPS: Please contact us for help.</p>
+                    <p> After connecting to the FIRMM host computer via <code>ssh -X firmm_host</code> (where <code>firmm_host</code> is your FIRMM Linux system's name), run <code>FIRMM -t</code>. This will start FIRMM on the <code>firmm_host</code> computer and copy a few test DICOM series to the incoming DICOM directory specified in the settings. Remember to click <strong>Start FIRMM</strong> in the browser window. FIRMM will close automatically when the test is finished.</p>
 
-                <p>When the FIRMM installation script is run, it will add two Windows batch files to the incoming DICOM folder on the FIRMM machine. They are called <code>FIRMM_session_start.bat</code> and <code>FIRMM_session_stop.bat</code>. When you are first mapping the drive from the scanner, copy them over to the FIRMM host PC.</p>
+                    <p><h3>How do I change the FD thresholds?</h3></p>
 
-                <p>Create shortcuts for these two files, e.g. on the Windows start menu. Once you have created the shortcuts, be sure to test them. The operator can then conveniently start and stop DICOM streaming during the imaging session by selecting the shortcuts to these .bat files.</p>
+                    <p> Run <code>FIRMM -s</code> on the FIRMM host computer. This will open the settings menu.</p>
 
-                <h3>Does FIRMM work with GE or PHILIPS scanners?</h3>
+                    <p><h3>Can I revert to a previously installed version of FIRMM if needed?</h3></p>
 
-                <p>FIRMM is designed to work with any scanner as long as DICOM data can be sent to a SAMBA shared network directory on the FIRMM host computer.</p>
+                    <p>Users can revert to a previous version of FIRMM if the minor version is the same (e.g. reverting from 2.1.1 to 2.1.0). This would normally occur only if a bugfix that was introduced within the minor version caused problems running FIRMM on the user's system.</p>
 
-                <h3>How do I test FIRMM?</h3>
+                    <p>To revert to a previous version, find the previous version of the <code>run.sh</code> file that was created by the FIRMM automatic updater. It will be stored in the same directory as your current <code>run.sh</code> and its name will contain the previous version number (e.g. <code>run.sh.2.1.0</code>). Re-save that previous file under the name <code>run.sh</code>, replacing or removing your current file. Then you can run FIRMM commands as normal and the desired version will be used.</p>
 
-                <p>After connecting to the FIRMM host computer via <code>ssh -X firmm_host</code> (where firmm_host is your FIRMM Linux system's name), run <code>FIRMM -t</code>. This will start FIRMM on the <code>firmm_host</code> computer and copy a few test DICOM series to the incoming DICOM directory specified in the settings. Remember to click <code>Start FIRMM</code> in the browser window.  FIRMM will close automatically when the test is finished.</p>
+                    <p><h3>Does FIRMM work with structural data?</h3></p>
 
-                <h3>How do I change the FD thresholds?</h3>
+                    <p> Not currently, but we plan to add this capability in an upcoming release.</p>
 
-                <p>Run <code>FIRMM -s</code> on the FIRMM host computer. This will open the settings menu.</p>
+                    <p><h3>Where has FIRMM been tested?</h3></p>
 
-                <h3>Does FIRMM work with structural data?</h3>
+                    <p> As of the creation date of this document, FIRMM has been tested on the following systems/scanners: - FIONA machine with Siemens Prisma scanner - Dell Optiplex running Ubuntu 14 (i5 processor, 4GB RAM, 1TBHDD) with Siemens Skyra scanner - Core i7-4790K (16GB RAM, SSD) with Siemens Prisma scanner</p>
 
-                <p>Not currently, but we plan to add this capability in an upcoming release.</p>
+                    <p><h3>Why does FIRMM occasionally start processing a previous session when I start it?</h3></p>
 
-                <h3>Can I revert to a previously installed version of FIRMM if needed?</h3>
-
-                <p>Users can revert to a previous version of FIRMM if the minor version is the same (e.g. reverting from 2.1.1 to 2.1.0). This would normally occur only if a bugfix that was introduced within the minor version caused problems running FIRMM on the user's system.</p>
-
-                <p>To revert to a previous version, find the previous version of the <code>run.sh</code> file that was created by the FIRMM automatic updater. It will be stored in the same directory as your current <code>run.sh</code> and its name will contain the previous version number (e.g. <code>run.sh.2.1.0</code>). Re-save that previous file under the name <code>run.sh</code>, replacing or removing your current file. Then you can run FIRMM commands as normal and the desired version will be used.</p>
-
-                <h3>Where has FIRMM been tested?</h3>
-
-                <p>As of now, FIRMM has been tested on the following systems/scanners:</p>
-                <ul>
-                    <li>Dell Optiplex running Ubuntu 14 (i5 processor, 4GB RAM, 1TBHDD) with Siemens Skyra scanner</li>
-                    <li>Core i7-4790K (16GB RAM, SSD) with Siemens Prisma scanner</li>
-                </ul>
-
-                <h3>Why does FIRMM occasionally start processing a previous session when I start it?</h3>
-
-                <p>When FIRMM is launched, it looks for the latest directory in the DICOM streaming directory to process. If FIRMM is launched within 10 minutes of the conclusion of a <strong>previous</strong> scanning session for which DICOMs were sent to FIRMM, and no DICOMs from the <strong>current</strong> session have been sent yet, it will see the <strong>previous</strong> session as "new" and start processing it. To remedy this, close FIRMM and re-launch it <strong>after</strong> some DICOMs have been sent for your current session. These can be any DICOMs, e.g. localizer, AAscout, T1, etc. FIRMM will see the new folder and wait for types of scans it can process (EPI, BOLD, etc.).</p>
+                    <p>When FIRMM is launched, it looks for the latest directory in the DICOM streaming directory to process. If FIRMM is launched within 10 minutes of the conclusion of a <strong>previous</strong> scanning session for which DICOMs were sent to FIRMM, and no DICOMs from the <strong>current</strong> session have been sent yet, it will see the <strong>previous</strong> session as &quot;new&quot; and start processing it. To remedy this, close FIRMM and re-launch it <strong>after</strong> some DICOMs have been sent for your current session. These can be any DICOMs, e.g. localizer, AAscout, T1, etc. FIRMM will see the new folder and wait for types of scans it can process (EPI, BOLD, etc.).</p>
 
             </div>
         </div>
