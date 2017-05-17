@@ -107,14 +107,16 @@
         </div>
     </section>
 
-    <section class="bg-primary full-section" style="box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.1);">
+    <section class="bg-primary full-section" style="box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.1); padding-top: 0;">
         <div class="container about">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading about">The FIRMM solution</h2>
-                    <hr class="light">
-                    <p class="desc">Our software suite allows you to measure data quality in real time, easily, intuitively, and accurately. Here's what you can do with FIRMM.</p>
-                    <img class="img-responsive center-block img-rounded" src="img/fullscreen.gif" alt="Full screen demo of FIRMM">
+                    <section>
+                        <h2 class="section-heading about">The FIRMM solution</h2>
+                        <hr class="light">
+                        <p class="desc">Our software suite allows you to measure data quality in real time, easily, intuitively, and accurately. Here's what you can do with FIRMM.</p>
+                        <img class="img-responsive center-block img-rounded" src="img/fullscreen.gif" alt="Full screen demo of FIRMM">
+                    </section>
                 </div>
                 <div class="features">
                     <div class="col-lg-12 text-center">
@@ -228,8 +230,16 @@
                     <p><h3>Does FIRMM store DICOMs?</h3></p>
 
                     <p>Any DICOMs used by FIRMM will be automatically deleted from the FIRMM computer after two days. Therefore, it is <strong>very important</strong> that users never count on FIRMM for long term data storage.</p>
-
-                    <p><strong>How do I get data from my scanner to FIRMM?</strong></p>
+                    
+                    <p><h3>What are the system requirements for running FIRMM?</h3></p>
+                    <p>The only hardware requirement for running FIRMM is a Docker-capable Linux computer networked to the computer running the scanner operating system, which is already part of the typical setup for MRI scanners used in research. The FIRMM software is self-contained in a Docker image and does not require licenses or the installation of other software packages. FIRMM has been most extensively used with the following software and hardware specifications:</p>
+                        <ul>
+                            <li>Ubuntu 14.04 LTS</li>
+                            <li>Intel Core i7-4790K 4.0 GHz</li>
+                            <li>16 GB RAM</li>
+                            <li>120GB SSD</li>
+                        </ul>
+                    <p><h3>How do I get data from my scanner to FIRMM?</h3></p>
 
                     <p>To use FIRMM effectively, DICOMs need to be transferred as fast as possible to the incoming DICOM directory on the FIRMM host computer.</p>
                     <ul>
@@ -268,7 +278,7 @@
 
                     <p><h3>Why does FIRMM occasionally start processing a previous session when I start it?</h3></p>
 
-                    <p>When FIRMM is launched, it looks for the latest directory in the DICOM streaming directory to process. If FIRMM is launched within 10 minutes of the conclusion of a <strong>previous</strong> scanning session for which DICOMs were sent to FIRMM, and no DICOMs from the <strong>current</strong> session have been sent yet, it will see the <strong>previous</strong> session as &quot;new&quot; and start processing it. To remedy this, close FIRMM and re-launch it <strong>after</strong> some DICOMs have been sent for your current session. These can be any DICOMs, e.g. localizer, AAscout, T1, etc. FIRMM will see the new folder and wait for types of scans it can process (EPI, BOLD, etc.).</p>
+                    <p>When FIRMM is launched, it looks for the latest directory in the DICOM streaming directory to process. If FIRMM is launched within 10 minutes of the conclusion of a <strong>previous</strong> scanning session for which DICOMs were sent to FIRMM, and no DICOMs from the <strong>current</strong> session have been sent yet, it will see the <strong>previous</strong> session as "new" and start processing it. To remedy this, close FIRMM and re-launch it <strong>after</strong> some DICOMs have been sent for your current session. These can be any DICOMs, e.g. localizer, AAscout, T1, etc. FIRMM will see the new folder and wait for types of scans it can process (EPI, BOLD, etc.).</p>
 
             </div>
         </div>
