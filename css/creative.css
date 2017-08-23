@@ -41,6 +41,10 @@ section {
 aside {
   padding: 50px 0;
 }
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: rgba(204,255,204,0.6);
+ }
 .no-padding {
   padding: 0;
 }
