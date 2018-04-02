@@ -21,11 +21,11 @@ a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: #222222;
+  color: #337ab7;
 }
 a:hover,
 a:focus {
-  color: #DDDDDD;
+  text-decoration: none;
 }
 p {
   font-size: 16px;
@@ -41,7 +41,7 @@ section {
 aside {
   padding: 50px 0;
 }
-.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>td,
 .table-striped>tbody>tr:nth-child(odd)>th {
    background-color: rgba(204,255,204,0.6);
  }
@@ -274,4 +274,4 @@ div.features > div {
 
 div.features > div:nth-of-type(odd) {
     box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.1);
-} 
+}
