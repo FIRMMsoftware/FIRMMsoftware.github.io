@@ -33,6 +33,20 @@
     ga('send', 'pageview');
     </script>
 
+    <script>
+    window.addEventListener("load", function(){
+    window.disclaimer.initialise({
+      "palette": {
+        "popup": {
+          "background": "#252e39"
+        },
+        "button": {
+          "background": "#14a7d0"
+        }
+      }
+    })});
+    </script>
+
     <title>FIRMM - Framewise Integrated Real-time MRI Monitoring</title>
 
     <!-- Bootstrap Core CSS -->
@@ -55,7 +69,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body id="page-top" style="overflow-x:hidden;">
@@ -413,6 +426,10 @@
             </div>
         </div>
     </section>
+
+    <div class="alert alert-info">
+        <h3 align='center'> FIRMM is for Investigational Use Only </h3>
+    </div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
