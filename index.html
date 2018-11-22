@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +30,6 @@
     ga('create', 'UA-103586837-2', 'auto');
     ga('send', 'pageview');
     </script>
-
     <script>
     window.addEventListener("load", function(){
     window.disclaimer.initialise({
@@ -62,18 +59,11 @@
 
     <!-- Theme CSS -->
     <link href="css/creative.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body id="page-top" style="overflow-x:hidden;">
 
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: #333;">
         <div class="container-fluid nav-container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -92,6 +82,12 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#users">Users</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#firmm">Get FIRMM</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#team">Our Team</a>
@@ -132,7 +128,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center about">
                         <h2 class="section-heading">Introduction</h2>
-                        <hr class="light">
+                        <br>
                         <video controls class="img-responsive center-block img-rounded" poster='img/FIRMM_logo_white_pointer.png' style="background-color: black;">
                             <source src="img/FIRMM_20180920_compressed.mp4" type="video/mp4">
                             Your browser does not support the video tag.
@@ -145,9 +141,9 @@
     <section class="bg-primary">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center about">
+                <div class="col-xs-12 text-center about">
                     <h2 class="section-heading">The problem</h2>
-                    <hr class="light">
+                    <br>
                     <p>Some subjects make it easy to collect high quality data...</p>
                     <img class="img-responsive img-rounded center-block" src="img/low_mover.gif" alt="Low movement subject scan">
                     <br>
@@ -166,12 +162,12 @@
     </section>
 
     <section class="bg-primary" style="box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.1); padding-top: 0;">
-        <div class="container about">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <section>
-                        <h2 class="section-heading about">The FIRMM solution</h2>
-                        <hr class="light">
+                    <section class="about">
+                        <h2 class="section-heading">The FIRMM solution</h2>
+                        <br>
                         <p class="desc">Our software suite allows you to measure data quality in real time, easily, intuitively, and accurately. Here's what you can do with FIRMM.</p>
                             <video class="img-responsive center-block img-rounded" width="1750" height="1250" autoplay muted loop>
                                 <source src="img/FIRMM_video2_baseline.mp4" type="video/mp4">
@@ -181,31 +177,51 @@
                 </div>
                 <div class="features">
                     <div class="col-lg-12 text-center">
-                        <section>
-                            <h3 class="section-heading">View framewise displacement calculations (i.e. movement) in real time.</p>
-                            <hr class="light">
-                            <img class="img-responsive center-block img-rounded" src="img/framewise_displacement.png" alt="Framewise displacement over time">
+                        <section class="about">
+                            <div class="row" style="display:flex; align-items:center; height:600px;">
+                                <div class="col-xs-7">
+                                    <img class="img-responsive center-block img-rounded" src="img/framewise_displacement.png" alt="Framewise displacement over time">
+                                </div>
+                                <div class="col-xs-4">
+                                    <h2 class="section-heading">View framewise displacement calculations (i.e. movement) in real time.</h2>
+                                </div>
+                            </div>
                         </section>
                     </div>
                     <div class="col-lg-12 text-center">
-                        <section>
-                            <h3 class="section-heading">Based on user input standards, see how much quality data is collected at a glance.</p>
-                            <hr class="light">
-                            <img class="img-responsive center-block img-rounded" src="img/collected_low_movement_table.png" alt="Collected low movement table">
+                        <section class="about">
+                            <div class="row" style="display:flex; align-items:center; height:600px;">
+                                <div class="col-xs-5 col-xs-offset-1">
+                                    <h2 class="section-heading">Based on user input standards, see how much quality data is collected at a glance.</h2>
+                                </div>
+                                <div class="col-xs-5">
+                                    <img class="img-responsive center-block img-rounded" src="img/collected_low_movement_table.png" alt="Collected low movement table">
+                                </div>
+                            </div>
                         </section>
                     </div>
                     <div class="col-lg-12 text-center">
-                        <section>
-                            <h3 class="section-heading">Predict how much scan time it will take to collect all the quality data you need.</p>
-                            <hr class="light">
-                            <img class="img-responsive center-block img-rounded" src="img/predicted_table.png" alt="FIRMM prediction table">
+                        <section class="about">
+                            <div class="row" style="display:flex; align-items:center; height:600px;">
+                                <div class="col-xs-7">
+                                    <img class="img-responsive center-block img-rounded" src="img/predicted_table.png" alt="FIRMM prediction table">
+                                </div>
+                                <div class="col-xs-4">
+                                    <h2 class="section-heading">Predict how much scan time it will take to collect all the quality data you need.</h2>
+                                </div>
+                            </div>
                         </section>
                     </div>
                     <div class="col-lg-12 text-center">
-                        <section>
-                            <h3 class="section-heading">Stop scanning when your goals are met.</p>
-                            <hr class="light">
-                            <img class="img-responsive center-block img-rounded" src="img/progress_to_criteria.png" alt="Progress to scanning criteria">
+                        <section class="about">
+                            <div class="row" style="display:flex; align-items:center; height:600px;">
+                                <div class="col-xs-5 col-xs-offset-1">
+                                    <h2 class="section-heading">Stop scanning when your goals are met.</h2>
+                                </div>
+                                <div class="col-xs-5">
+                                    <img class="img-responsive center-block img-rounded" src="img/progress_to_criteria.png" alt="Progress to scanning criteria">
+                                </div>
+                            </div>
                         </section>
                     </div>
                 </div>
@@ -216,8 +232,9 @@
     <section class="bg-primary">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center about">
+                <div class="col-xs-8 col-xs-offset-2 text-center about">
                     <h2 class="section-heading">See FIRMM in action</h2>
+                    <br>
                     <video controls class="img-responsive center-block img-rounded" poster='img/FIRMM_logo_white_pointer.png' style="background-color: black;">
                         <source src="img/FIRMM Version 3.0.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -227,92 +244,187 @@
         </div>
     </section>
 
-    <section class="bg-primary" style="box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.1);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center about" id="download">
-                    <img class="img-responsive center-block" src="img/FIRMM_logo_color_small.png">
-
-                    <h2 class="section-heading">Introducing FIRMM Version 3!</h2>
-
-                    <p><h3>Here's what's new:</h3>
-                            <p style="font-size: 20px; margin-bottom: 10px; text-align:left;"><b>Easier to adjust settings:</b> change settings such as brain radius and FD thresholds right from the Settings Tab in the FIRMM GUI.</p>
-                            <p style="font-size: 20px; margin-bottom: 10px; text-align:left;"><b>Filtered FD:</b> control for artifactual motion induced by respiration.</p>
-<!--                             <p style="font-size: 20px; margin-bottom: 10px; text-align:left;"><b>Select your session:</b> process older data or use one FIRMM computer with two scanners simultaneously.<p> -->
-                            <p style="font-size: 20px; margin-bottom: 10px; text-align:left;"><b>Greater display control:</b> de-select BOLD series you don't want included in FIRMM's statistics and charts.</p>
-                    </p>
-
-                        <a href="http://www.nitrc.org/projects/firmm/" style="font-size: 24px;" target="_blank" class="btn btn-lg btn-primary sr-button">Download FIRMM 3</a>
-                        <a href="http://firmm.readthedocs.io/en/latest/" style="font-size: 24px" target="_blank" class="btn btn-lg btn-info sr-button">Documentation</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-info">
+    <section class="bg-primary" id="users" style="box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.1);">
         <div class="container about">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">If you’re using FIRMM, please cite:</h2>
-                    <hr style="border-top: 3px solid #333;">
+                <div class="col-xs-8 col-xs-offset-2 text-center">
+                    <h2 class="section-heading">Who's Using FIRMM?</h2>
                 </div>
-                <div class="col-lg-8 col-lg-offset-2">
-                    <p><a style="font-size: 20px" href="http://www.sciencedirect.com/science/article/pii/S1053811917306729" target="_blank">Dosenbach NUF, Koller JM, Earl, EA, Miranda-Dominguez O, Klein RL, Van AN, Snyder AZ, Nagel BJ,
-                        Nigg JT, Nguyen A, Wesevich V, Greene DJ, Fair DA. Real-time motion analytics during brain MRI
-                        improve data quality and reduce costs. Neuroimage. 2017;161:80-93.</a></p>
-                        <p><a style="font-size: 20px" href="https://www.sciencedirect.com/science/article/pii/S1053811918300235" target="_blank">Greene DJ, Koller JM, Hampton JM, Wesewich V, Van AN, Nguyen AL, Hoyt C, McIntyre L, Earl EA,
-                            Klein RA, Shimony JS, Petersen SE, Schlaggar BL, Fair DA, Dosenbach NUF. Behavioral interventions for reducing head motion during MRI scans in children. Neuroimage. 2018; Jan 11.</a></p>
+            </div>
+            <br>
+            <div class="row" style="display:flex; align-items:center;">
+                <div class="col-xs-3">
+                    <a href="https://abcdstudy.org/" target="_blank"><img style="background-color:#FFF; padding:0px;" class="img-responsive img-rounded center-block" src="logos/ABCDLogo.jpg"></a>
                 </div>
-                <div class="col-lg-8 col-lg-offset-2">
-                    <p style="font-size: 20px">If you'd like to use FIRMM in a grant proposal, we provide more information in <a href="https://www.nitrc.org/docman/view.php/1144/2257/FIRMM_for_Grants.docx" target="_blank">Word format</a> and <a href="https://www.nitrc.org/docman/view.php/1144/2256/FIRMM_for_Grants.pdf" target="_blank">PDF format</a>.</p>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/BCH Logo.jpg">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:10px;" class="img-responsive img-rounded center-block" src="logos/Berkeley Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:10px;" class="img-responsive img-rounded center-block" src="logos/Boulder Logo.png">
+                </div>
+            </div>
+            <br>
+            <div class="row" style="display:flex; align-items:center;">
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/Cermep Logo.jpg">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/Charite Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/CHOP Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:10px;" class="img-responsive img-rounded center-block" src="logos/Columbia Logo.png">
+                </div>
+            </div>
+            <br>
+            <div class="row" style="display:flex; align-items:center;">
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:0px;" class="img-responsive img-rounded center-block" src="logos/Cornell Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:10px;" class="img-responsive img-rounded center-block" src="logos/Denver Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:0px;" class="img-responsive img-rounded center-block" src="logos/Ecole Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/Emory Logo.png">
+                </div>
+            </div>
+            <br>
+            <div class="row" style="display:flex; align-items:center;">
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:10px;" class="img-responsive img-rounded center-block" src="logos/FIU Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:0px;" class="img-responsive img-rounded center-block" src="logos/Geneva Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/Georgia Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/Harvard Logo.png">
+                </div>
+            </div>
+            <br>
+            <div class="row" style="display:flex; align-items:center;">
+                <div class="col-xs-3">
+                    <a href="https://www.humanconnectome.org/" target="_blank"><img style="background-color:#FFF; padding:0px;" class="img-responsive img-rounded center-block" src="logos/HCP Logo.png"></a>
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:0px;" class="img-responsive img-rounded center-block" src="logos/ICM Logo.jpg">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/Irvine Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/MGH Logo.jpg">
+                </div>
+            </div>
+            <br>
+            <div class="row" style="display:flex; align-items:center;">
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/Minnesota Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:0px;" class="img-responsive img-rounded center-block" src="logos/Murdoch Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:0px;" class="img-responsive img-rounded center-block" src="logos/Nebraska Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:0px;" class="img-responsive img-rounded center-block" src="logos/New Mexico Logo.png">
+                </div>
+            </div>
+            <br>
+            <div class="row" style="display:flex; align-items:center;">
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:0px;" class="img-responsive img-rounded center-block" src="logos/OHSU Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:0px;" class="img-responsive img-rounded center-block" src="logos/Oregon Logo.jpg">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:0px;" class="img-responsive img-rounded center-block" src="logos/Penn Logo.jpg">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/Pitt Logo.png">
+                </div>
+            </div>
+            <br>
+            <div class="row" style="display:flex; align-items:center;">
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/Princeton Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/Rochester Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:0px;" class="img-responsive img-rounded center-block" src="logos/SLCH Logo.jpg">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/SLU Logo.jpg">
+                </div>
+            </div>
+            <br>
+            <div class="row" style="display:flex; align-items:center;">
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:0px;" class="img-responsive img-rounded center-block" src="logos/UCLA Logo.jpg">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/UNC Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/Utah Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/Washington Logo.png">
+                </div>
+            </div>
+            <br>
+            <div class="row" style="display:flex; align-items:center;">
+                <div class="col-xs-3 col-xs-offset-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/WUSTL Logo.png">
+                </div>
+                <div class="col-xs-3">
+                    <img style="background-color:#FFF; padding:5px;" class="img-responsive img-rounded center-block" src="logos/Yale Logo.png">
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
+    <section id="firmm" class="bg-primary">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Who's Using FIRMM?</h2>
-                    <table class="table table-striped table-bordered">
-                        <tr><td><h4><a style="color: #337ab7" href="https://abcdstudy.org/" target="_blank">The Adolescent Brain Cognitive Development (ABCD) Study</a></h4></tr></td>
-                        <tr><td><h4>Boston Children's Hospital</h4></tr></td>
-                        <tr><td><h4>CERMEP Imagerie du Vivant-Lyon, France</h4></tr></td>
-                        <tr><td><h4>Children's Hospital of Philadelphia</h4></tr></td>
-                        <tr><td><h4>Columbia University</h4></tr></td>
-                        <tr><td><h4>Emory University</h4></tr></td>
-                        <tr><td><h4>Florida International University</h4></tr></td>
-                        <tr><td><h4>Geneva University Hospitals and &Eacute;cole Polytechnique F&eacute;d&eacute;rale de Lausanne</h4></tr></td>
-                        <tr><td><h4>Harvard University</h4></tr></td>
-                        <tr><td><h4><a style="color: #337ab7" href="https://www.humanconnectome.org/" target="_blank">Human Connectome Project (HCP)</a></h4></tr></td>
-                        <tr><td><h4><a style="color: #337ab7" href="http://www.ibis-network.org/" target="_blank">The Infant Brain Imaging Study (IBIS)</a></h4></tr></td>
-                        <tr><td><h4>Institut du Cerveau et de la Moelle &Eacute;pini&egrave;re (Brain and Spine Institute), Paris, France</h4></tr></td>
-                        <tr><td><h4>Massachusetts General Hospital</h4></tr></td>
-                        <tr><td><h4>Murdoch Children's Research Institute</h4></tr></td>
-                        <tr><td><h4>Oregon Health and Science University</h4></tr></td>
-                        <tr><td><h4>Saint Louis University</h4></tr></td>
-                        <tr><td><h4>St. Louis Children's Hospital</h4></tr></td>
-                        <tr><td><h4>University of California, Berkeley</h4></tr></td>
-                        <tr><td><h4>University of California, Irvine</h4></tr></td>
-                        <tr><td><h4>University of California, Los Angeles</h4></tr></td>
-                        <tr><td><h4>University of Colorado Boulder</h4></tr></td>
-                        <tr><td><h4>University of Colorado Denver</h4></tr></td>
-                        <tr><td><h4>University of Minnesota</h4></tr></td>
-                        <tr><td><h4>University of Nebraska-Lincoln</h4></tr></td>
-                        <tr><td><h4>University of New Mexico</h4></tr></td>
-                        <tr><td><h4>University of North Carolina</h4></tr></td>
-                        <tr><td><h4>University of North Carolina at Chapel Hill</h4></tr></td>
-                        <tr><td><h4>University of Oregon</h4></tr></td>
-                        <tr><td><h4>University of Pennsylvania</h4></tr></td>
-                        <tr><td><h4>University of Pittsburgh</h4></tr></td>
-                        <tr><td><h4>University of Rochester</h4></tr></td>
-                        <tr><td><h4>University of Utah</h4></tr></td>
-                        <tr><td><h4>University of Washington</h4></tr></td>
-                        <tr><td><h4>Washington University in St. Louis</h4></tr></td>
-                        <tr><td><h4>Weill Cornell Medical Center</h4></tr></td>
-                        <tr><td><h4>Yale University</h4></tr></td>
-                    </table>
+                <div class="col-xs-10 col-xs-offset-1 about" id="download">
+                    <img class="img-responsive center-block" src="img/FIRMM_logo_color_small.png">
+                    <h2 class="section-heading text-center">Get FIRMM</h2><br>
+                    <div class="text-center">
+                        <a href="http://www.nitrc.org/projects/firmm/" style="font-size: 24px;" target="_blank" class="btn btn-lg btn-primary sr-button">Download FIRMM 3</a>
+                        <a href="http://firmm.readthedocs.io/en/latest/" style="font-size: 24px" target="_blank" class="btn btn-lg btn-info sr-button">Documentation</a>
+                    </div>
+                    <br>
+                    <div class="col-xs-12 text-center">
+                        <h3 class="section-heading">If you’re using FIRMM, please cite:</h3>
+                    </div>
+                    <div class="col-xs-12">
+                        <p><a style="color: #5bc0de; font-size: 16px" href="http://www.sciencedirect.com/science/article/pii/S1053811917306729" target="_blank">Dosenbach NUF, Koller JM, Earl, EA, Miranda-Dominguez O, Klein RL, Van AN, Snyder AZ, Nagel BJ,
+                            Nigg JT, Nguyen A, Wesevich V, Greene DJ, Fair DA. Real-time motion analytics during brain MRI
+                            improve data quality and reduce costs. Neuroimage. 2017;161:80-93.</a></p>
+                        <p><a style="color: #5bc0de; font-size: 16px" href="https://www.sciencedirect.com/science/article/pii/S1053811918300235" target="_blank">Greene DJ, Koller JM, Hampton JM, Wesewich V, Van AN, Nguyen AL, Hoyt C, McIntyre L, Earl EA,
+                            Klein RA, Shimony JS, Petersen SE, Schlaggar BL, Fair DA, Dosenbach NUF. Behavioral interventions for reducing head motion during MRI scans in children. Neuroimage. 2018; Jan 11.</a></p>
+                    </div>
+                    <div class="col-xs-12">
+                        <p style="font-size: 16px">If you'd like to use FIRMM in a grant proposal, we provide more information in <a style="color: #5bc0de" href="https://www.nitrc.org/docman/view.php/1144/2257/FIRMM_for_Grants.docx" target="_blank">Word format</a> and <a style="color: #5bc0de" href="https://www.nitrc.org/docman/view.php/1144/2256/FIRMM_for_Grants.pdf" target="_blank">PDF format</a>.</p>
+                    </div>
+                    <div class="col-xs-12 alert alert-info">
+                        <h3 align='center'>FIRMM is for Investigational Use Only</h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -410,7 +522,7 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="bg-info">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -426,10 +538,6 @@
             </div>
         </div>
     </section>
-
-    <div class="alert alert-info">
-        <h3 align='center'> FIRMM is for Investigational Use Only </h3>
-    </div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

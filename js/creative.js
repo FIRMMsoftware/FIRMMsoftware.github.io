@@ -31,10 +31,9 @@
     // Initialize and Configure Scroll Reveal Animation
     window.sr = ScrollReveal();
     sr.reveal('.about', {
-        duration: 300,
-        scale: 0.5,
-        reset: true,
-        viewFactor: 0.1,
+        duration: 700,
+        reset: false,
+        viewFactor: 0.3,
         delay: 50
     });
 
