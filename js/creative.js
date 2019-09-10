@@ -31,10 +31,10 @@
     // Initialize and Configure Scroll Reveal Animation
     window.sr = ScrollReveal();
     sr.reveal('.about', {
-        duration: 1000,
+        duration: 500,
         reset: false,
-        viewFactor: 0.6,
-        delay: 50
+        viewFactor: 0.25,
+        delay: 10
     });
 
 })(jQuery); // End of use strict

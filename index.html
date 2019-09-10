@@ -7,45 +7,21 @@
     <meta name="description" content="Easy to set up and use, the FIRMM software suite provides MRI scanner operators with data quality metrics in real time. Using FIRMM to identify the ideal scan time for each person can reduce total brain MRI scan times and associated costs by 50% or more.">
     <meta name="author" content="">
     <link rel="icon" href="img/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-    <script>
-    window.addEventListener("load", function(){
-    window.cookieconsent.initialise({
-      "palette": {
-        "popup": {
-          "background": "#252e39"
-        },
-        "button": {
-          "background": "#14a7d0"
-        }
-      }
-    })});
-    </script>
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-103586837-2', 'auto');
-    ga('send', 'pageview');
-    </script>
-
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+    <script>window.addEventListener("load",function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#252e39"},"button":{"background":"#14a7d0"}}})});</script>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-103586837-2','auto');ga('send','pageview');</script>
     <title>FIRMM - Framewise Integrated Real-time MRI Monitoring</title>
-
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
     <!-- Custom Fonts -->
     <script src="https://use.fontawesome.com/e1a3eeb374.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-
     <!-- Plugin CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet">
-
     <!-- Theme CSS -->
-    <link href="css/creative.css" rel="stylesheet">
+    <link href="css/firmm.min.css" rel="stylesheet">
 </head>
 
 <body id="page-top" style="overflow-x:hidden;">
@@ -70,10 +46,10 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#users">Users</a>
+                        <a class="page-scroll" href="#users">Our Users</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#firmm">Get FIRMM</a>
+                        <a class="page-scroll" href="#firmm">Download FIRMM</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#team">Our Team</a>
@@ -86,9 +62,6 @@
                     </li>
                     <li>
                         <a href="http://firmm.readthedocs.io/en/latest/" target="_blank">Documentation</a>
-                    </li>
-                    <li>
-                        <a href="http://www.nitrc.org/projects/firmm/" target="_blank">Download</a>
                     </li>
                 </ul>
             </div>
@@ -104,12 +77,12 @@
                 <hr>
                 <p>Easy to set up and use, the FIRMM software suite provides MRI scanner operators with data quality metrics in real time. Using FIRMM to identify the ideal scan time for each person can reduce total brain MRI scan times and associated costs by 50% or more.</p>
                 <a href="#about" class="btn btn-default btn-lg page-scroll">Find Out More</a>
-                <a href="http://www.nitrc.org/projects/firmm/" target="_blank" class="btn btn-primary btn-lg">Download</a>
+                <a href="#firmm" class="btn btn-primary btn-lg page-scroll">Download</a>
             </div>
         </div>
     </header>
 
-    <section class="bg-primary">
+    <section class="bg-primary" id="about">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 text-center about">
@@ -374,7 +347,6 @@
             <div class="row">
                 <div class="col-xs-10 col-xs-offset-1 about" id="download">
                     <img class="img-responsive center-block" src="img/FIRMM_logo_color_small.png">
-                    <h2 class="section-heading text-center">Get FIRMM</h2><br>
                     <div class="text-center">
                         <a href="http://www.nitrc.org/projects/firmm/" style="font-size: 24px;" target="_blank" class="btn btn-lg btn-primary sr-button">Download FIRMM 3.2</a>
                         <a href="http://firmm.readthedocs.io/en/latest/" style="font-size: 24px" target="_blank" class="btn btn-lg btn-info sr-button">Documentation</a>
@@ -399,10 +371,10 @@
                             Klein RL, Shimony JS, Petersen SE, Schlaggar BL, Fair DA, Dosenbach NUF. Behavioral interventions for reducing head motion during MRI scans in children. Neuroimage. 2018; Jan 11.</a></p>
                     </div>
                     <div class="col-xs-12">
-                        <p style="font-size: 16px">If you'd like to use FIRMM in a grant proposal, we provide more information in <a style="color: #5bc0de" href="https://www.nitrc.org/docman/view.php/1144/2257/FIRMM_for_Grants.docx" target="_blank">Word format</a> and <a style="color: #5bc0de" href="https://www.nitrc.org/docman/view.php/1144/2256/FIRMM_for_Grants.pdf" target="_blank">PDF format</a>.</p>
+                        <p style="font-size: 16px">If you'd like to use FIRMM in a grant proposal, we provide more information in <a style="color: #5bc0de" href="https://www.nitrc.org/docman/view.php/1144/2257/FIRMM_for_Grants.docx" target="_blank">Word</a> and <a style="color: #5bc0de" href="https://www.nitrc.org/docman/view.php/1144/2256/FIRMM_for_Grants.pdf" target="_blank">PDF</a> formats.</p>
                     </div>
                     <div class="col-xs-12 alert alert-info">
-                        <h3 align='center'>FIRMM is for Investigational Use Only</h3>
+                        <h3 style="text-align:center;margin-top:10px;">FIRMM is for Investigational Use Only</h3>
                     </div>
                 </div>
             </div>
@@ -412,7 +384,7 @@
     <section id="team">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-xs-12 text-center">
                     <h2 class="section-heading">Our Team</h2>
                     <hr class="primary">
                 </div>
@@ -420,28 +392,28 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-xs-12 text-center">
                     <h2 class="section-heading">Research and Development</h2><br>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-xs-12 text-center">
+                <div class="col-md-4 col-xs-12 text-center">
                     <div>
                         <img class="portfolio-pic" src="img/damien.jpg">
                         <h3>Damien Fair</h3>
                         <p class="text-muted">Principal Investigator<br>Oregon Health and Science University</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-xs-12 text-center">
+                <div class="col-md-4 col-xs-12 text-center">
                     <div>
                         <img class="portfolio-pic" src="img/nico.jpg">
                         <h3>Nico Dosenbach</h3>
                         <p class="text-muted">Principal Investigator<br>Washington University in St. Louis</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-xs-12 text-center">
+                <div class="col-md-4 col-xs-12 text-center">
                     <div>
                         <img class="portfolio-pic" src="img/jackie.jpg">
                         <h3>Jackie Hampton</h3>
@@ -450,21 +422,21 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-xs-12 text-center">
+                <div class="col-md-4 col-xs-12 text-center">
                     <div>
                         <img class="portfolio-pic" src="img/eric.jpg">
                         <h3>Eric Earl</h3>
                         <p class="text-muted">Developer<br>Oregon Health and Science University</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-xs-12 text-center">
+                <div class="col-md-4 col-xs-12 text-center">
                     <div>
                         <img class="portfolio-pic" src="img/oscar.jpg">
                         <h3>Oscar Miranda Dominguez</h3>
                         <p class="text-muted">Developer<br>Oregon Health and Science University</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-xs-12 text-center">
+                <div class="col-md-4 col-xs-12 text-center">
                     <div>
                         <img class="portfolio-pic" src="img/jon.jpg">
                         <h3>Jonathan Koller</h3>
@@ -473,21 +445,21 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-xs-12 text-center">
+                <div class="col-md-4 col-xs-12 text-center">
                     <div>
                         <img class="portfolio-pic" src="img/andrew.jpg">
                         <h3>Andrew Van</h3>
                         <p class="text-muted">Developer<br>Washington University in St. Louis</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-xs-12 text-center">
+                <div class="col-md-4 col-xs-12 text-center">
                     <div>
                         <img class="portfolio-pic" src="img/amy.jpg">
                         <h3>Amy Mirro</h3>
                         <p class="text-muted">Developer<br>Washington University in St. Louis</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-xs-12 text-center">
+                <div class="col-md-4 col-xs-12 text-center">
                     <div>
                         <img class="portfolio-pic" src="img/Ry.jpeg">
                         <h3>Ry Miller</h3>
@@ -498,35 +470,35 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-xs-12 text-center">
                     <h2 class="section-heading">Business and Regulatory</h2><br>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-3 col-xs-12 text-center">
+                <div class="col-md-3 col-xs-12 text-center">
                     <div>
                         <img class="portfolio-pic" src="img/hans.jpeg">
                         <h3>Hans Schoepflin</h3>
                         <p class="text-muted">Co-Founder</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-xs-12 text-center">
+                <div class="col-md-3 col-xs-12 text-center">
                     <div>
                         <img class="portfolio-pic" src="img/George Kokke.jpg">
                         <h3>George Kokke</h3>
                         <p class="text-muted">Vice President</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-xs-12 text-center">
+                <div class="col-md-3 col-xs-12 text-center">
                     <div>
                         <img class="portfolio-pic" src="img/Jay Miller.jpeg">
                         <h3>Jay Miller</h3>
                         <p class="text-muted">Business Advisor</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-xs-12 text-center">
+                <div class="col-md-3 col-xs-12 text-center">
                     <div>
                         <img class="portfolio-pic" src="img/Lawrence Tanenbaum.png">
                         <h3>Lawrence Tanenbaum</h3>
@@ -537,11 +509,11 @@
         </div>
     </section>
 
-    <section id="twitter">
+    <section id="twitter" style="padding-top:0;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a class="twitter-timeline" data-height="500" data-theme="light" href="https://twitter.com/firmmsoftware">Tweets by firmmsoftware</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <div class="col-xs-10 col-xs-offset-1 text-center">
+                    <a class="twitter-timeline" data-height="700" data-theme="light" href="https://twitter.com/firmmsoftware">Tweets by firmmsoftware</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
         </div>
@@ -550,7 +522,7 @@
     <section id="contact" class="bg-info">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
+                <div class="col-xs-8 col-xs-offset-2 text-center">
                     <h2 class="section-heading">Contact Info</h2>
                     <hr class="primary">
                     <p><a style="color: #337ab7" href="mailto:info@firmm.io">Contact our team</a> with questions, comments, reviews, or information about using FIRMM in grant proposals.</p>
