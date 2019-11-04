@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Easy to set up and use, the FIRMM software suite provides MRI scanner operators with data quality metrics in real time. Using FIRMM to identify the ideal scan time for each person can reduce total brain MRI scan times and associated costs by 50% or more.">
+  <meta name="author" content="">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>window.addEventListener("load",function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#222222"},"button":{"background":"#DDDDDD"}}})});</script>
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-103586837-2','auto');ga('send','pageview');</script>
+  <title>FIRMM - Framewise Integrated Real-time MRI Monitoring</title>
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="css/firmm.css">
+</head>
+
+<body data-spy="scroll" data-target="#navbarText">
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark animated fadeInDown delay-2s">
+    <a class="navbar-brand ease" href="#page-top">FIRMM <img class="mini-logo" src="img/FIRMM_logo_white_pointer.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link ease" href="#about"><i class="fas fa-info"></i> About</a>
+        </li class="nav-item">
+        <li class="nav-item">
+          <a class="nav-link ease" href="#users"><i class="fas fa-users"></i> Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ease" href="#download"><i class="fas fa-download"></i> Download</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ease" href="#team"><i class="fas fa-sitemap"></i> Team</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ease" href="#twitter"><i class="fab fa-twitter"></i> Twitter</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ease" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://firmm.readthedocs.io/en/latest/FAQ/" target="_blank"><i class="fas fa-question"></i> FAQ</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://firmm.readthedocs.io/en/latest/" target="_blank"><i class="fas fa-book-open"></i> Docs</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid section d-flex mirrorbg" id="page-top">
+    <div class="row align-items-center fill-width">
+      <div class="col-12 d-flex justify-content-center header-box">
+        <h1 class="animated-header">
+          <span class="letter">F</span>
+          <span class="letter">I</span>
+          <span class="letter">R</span>
+          <span class="letter">M</span>
+          <span class="letter">M</span>
+          <span class="letter"><img class="large-logo" src="img/FIRMM_logo_white_pointer.png"></span>
+        </h1>
+      </div>
+      <div class="col-7 offset-1 blurb">
+        <div class="jumbotron">
+          <p class="slight-indent title animated fadeIn slow">Easy to set up and use, the FIRMM software suite provides MRI scanner operators with data quality metrics in real time. Using FIRMM to identify the ideal scan time for each person can reduce total brain MRI scan times and associated costs by 50% or more.</p>
+          <a href="#about" class="slight-indent btn btn-secondary btn-lg ease animated fadeIn slow">Learn More</a>
+          <a href="#download" class="btn btn-primary btn-lg ease animated fadeIn slow"><i class="fas fa-download"></i> v3.2</a> 
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js" integrity="sha256-98Q574VkbV+PkxXCKSgL6jVq9mrVbS7uCdA+vt0sLS8=" crossorigin="anonymous"></script>
+      <script>
+        var textWrapper = document.querySelector('.animated-header');
+        anime.timeline({loop: false})
+          .add({
+            targets: '.animated-header .letter',
+            translateX: [40,0],
+            translateZ: 0,
+            opacity: [0,1],
+            easing: "easeOutExpo",
+            duration: 500,
+            delay: (el, i) => 500 + 30 * i,
+            begin: (anim) => $('.blurb').hide()
+          }).add({
+            targets: '.animated-header .letter',
+            translateX: [0,-30],
+            opacity: [1,0],
+            easing: "easeInExpo",
+            duration: 500,
+            delay: (el, i) => 100 + 30 * i,
+            complete: (anim) => {
+              $('.header-box').removeClass('d-flex').hide();
+              $('.blurb').show();
+            }
+          });
+      </script>
+    </div>
+  </div>
+
+  <div class="container-fluid section py-4" id="about">
+    <div class="row fill-height" id="low">
+      <div class="col-5 offset-1 d-flex align-self-center sr-class">
+        <img class="img-fluid" src="img/low_mover.gif" alt="Low movement subject scan">
+      </div>
+      <div class="col-5 d-flex flex-column align-self-center sr-class">
+        <p class="subtitle d-flex justify-content-center">Some subjects make it easy to collect high quality data...</p>
+        <p class="title d-flex justify-content-center animated infinite flash slower"><a class="arrow ease" href="#hi"><i class="fas fa-caret-down"></i></a></p>
+      </div>
+    </div>
+    <div class="row fill-height" id="hi">
+      <div class="col-5 offset-1 d-flex align-self-center sr-class">
+        <img class="img-fluid" src="img/high_mover.gif" alt="High movement subject scan">
+      </div>
+      <div class="col-5 d-flex flex-column align-self-center sr-class">
+        <p class="subtitle d-flex justify-content-center">... some don't...</p>
+        <p class="title d-flex justify-content-center animated infinite flash slower"><a class="arrow ease" href="#med"><i class="fas fa-caret-down"></i></a></p>
+      </div>
+    </div>
+    <div class="row fill-height" id="med">
+      <div class="col-5 offset-1 d-flex align-self-center sr-class">
+        <img class="img-fluid" src="img/med_mover.gif" alt="Medium movement subject scan">
+      </div>
+      <div class="col-5 d-flex flex-column align-self-center sr-class">
+        <p class="subtitle d-flex justify-content-center">... and with most, it's hard to tell just by looking.</p>
+        <p class="title d-flex justify-content-center animated infinite flash slower"><a class="arrow ease" href="#vid1"><i class="fas fa-caret-down"></i></a></p>
+      </div>
+    </div>
+
+    <div class="row fill-height" id="vid1">
+      <div class="col-4 offset-1 d-flex flex-column align-self-center sr-class">
+        <p class="subtitle d-flex justify-content-center">Our software suite allows you to measure data quality in real time, easily, intuitively, and accurately. Here's what you can do with FIRMM.</p>
+        <p class="title d-flex justify-content-center animated infinite flash slower"><a class="arrow ease" href="#feature1"><i class="fas fa-caret-down"></i></a></p>
+      </div>
+      <div class="col-6 d-flex align-self-center sr-class">
+        <video class="img-fluid" autoplay muted loop>
+            <source src="img/FIRMM_video2_baseline.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div class="row fill-height" id="feature1">
+      <div class="col-5 offset-1 d-flex align-self-center sr-class">
+        <img class="img-fluid" src="img/framewise_displacement.png" alt="Framewise displacement over time">
+      </div>
+      <div class="col-4 offset-1 d-flex flex-column align-self-center sr-class">
+        <p class="subtitle d-flex justify-content-center">View framewise displacement calculations (i.e. movement) in real time.</p>
+        <p class="title d-flex justify-content-center animated infinite flash slower"><a class="arrow ease" href="#feature2"><i class="fas fa-caret-down"></i></a></p>
+      </div>
+    </div>
+    <div class="row fill-height" id="feature2">
+      <div class="col-5 offset-1 d-flex flex-column align-self-center sr-class">
+        <p class="subtitle d-flex justify-content-center">See the quality of your data at a glance.</p>
+        <p class="title d-flex justify-content-center animated infinite flash slower"><a class="arrow ease" href="#feature3"><i class="fas fa-caret-down"></i></a></p>
+      </div>
+      <div class="col-5 d-flex align-self-center justify-content-center sr-class">
+        <img class="img-fluid" src="img/collected_low_movement_table.png" alt="Collected low movement table">
+      </div>
+    </div>
+    <div class="row fill-height" id="feature3">
+      <div class="col-5 offset-1 d-flex align-self-center justify-content-center sr-class">
+        <img class="img-fluid" src="img/predicted_table.png" alt="FIRMM prediction table">
+      </div>
+      <div class="col-5 d-flex flex-column align-self-center sr-class">
+        <p class="subtitle d-flex justify-content-center">Predict how much scan time it will take to collect all the quality data you need.</p>
+        <p class="title d-flex justify-content-center animated infinite flash slower"><a class="arrow ease" href="#feature4"><i class="fas fa-caret-down"></i></a></p>
+      </div>
+    </div>
+    <div class="row fill-height" id="feature4">
+      <div class="col-5 offset-1 d-flex flex-column align-self-center sr-class">
+        <p class="subtitle d-flex justify-content-center">Stop scanning when your goals are met.</p>
+        <p class="title d-flex justify-content-center animated infinite flash slower"><a class="arrow ease" href="#vid2"><i class="fas fa-caret-down"></i></a></p>
+      </div>
+      <div class="col-5 d-flex align-self-center justify-content-center sr-class">
+        <img class="img-fluid" src="img/progress_to_criteria.png" alt="Progress to scanning criteria">
+      </div>
+    </div>
+
+    <div class="row fill-height" id="vid2">
+      <div class="col-8 offset-2 d-flex flex-column align-self-center sr-class">
+        <p class="subtitle d-flex justify-content-center">FIRMM in action</p>
+        <video class="img-fluid" autoplay muted loop controls>
+            <source src="img/FIRMM Version 3.0.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid section d-flex py-4" id="users">
+    <div class="row align-items-center fill-width my-5">
+      <div class="col-10 offset-1 my-5">
+          <p class="subtitle d-flex justify-content-center sr-class">Our Users</p>
+        <div class="grid">
+          <div class="grid-sizer col-1 col-sm-1 col-md-1 col-lg-1"></div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/ABCD Logo.jpg">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/Aix Marseille Universite Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/Basque Logo.jpg">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/BCH Logo.jpg">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:10px;" src="logos/Berkeley Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:10px;" src="logos/Boulder Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/Calgary Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/Cermep Logo.jpg">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/Charite Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/CHOP Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:10px;" src="logos/Columbia Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/Cornell Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:10px;" src="logos/Denver Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/Ecole Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/Emory Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:10px;" src="logos/FIU Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/Geneva Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/Georgia Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/Harvard Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/HCP Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/ICM Logo.jpg">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/Irvine Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/Maryland Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/MentalHygiene RFMH Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/MGH Logo.jpg">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/Michigan Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/Minnesota Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/Murdoch Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/Nebraska Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/New Mexico Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/Northwestern Logo.jpg">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/NY State Psychiatric Institute Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/OHSU Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/Oregon Logo.jpg">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/Penn Logo.jpg">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/PennState Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/Pitt Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/Princeton Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/Rochester Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/SLCH Logo.jpg">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/SLU Logo.jpg">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" src="logos/UCLA Logo.jpg">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/UNC Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/Utah Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/Washington Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/Wisconsin Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/WUSTL Logo.png">
+            </div>
+          </div>
+          <div class="grid-item col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="grid-item-content d-flex justify-content-center">
+              <img class="img-fluid logo" style="padding:5px;" src="logos/Yale Logo.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid section d-flex py-4" id="download">
+    <div class="row fill-width align-items-center">
+      <div class="col-5 offset-1 sr-class">  
+        <p class="subtitle d-flex justify-content-center">FIRMM v3.2</p>
+        <div class="d-flex justify-content-center">
+          <img class="img-fluid" src="img/FIRMM_logo_color_small.png">
+        </div>
+        <p class="subtitle d-flex justify-content-center">What's new in v3.2:</p>
+        <div class="d-flex justify-content-center">
+          <ul>
+            <li>Full integration with GE Healthcare MRI systems.</li>
+            <li>Export motion statistics in CSV format for research and review.</li>
+            <li>Support for sessions with variable repetition time (TR) acquisitions.</li>
+            <li>Administrator-free installation using Singularity.</li>
+            <li>Various backend improvements making motion calculation faster.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-5 sr-class">
+        <div class="alert alert-warning my-1">
+          <p class="subtitle d-flex justify-content-center my-0">FIRMM is for Investigational Use Only*</p>
+        </div>
+        <p class="small-text d-flex justify-content-center">*FIRMM is for Research Use Only. FIRMM has not been cleared, or approved, by the US Food and Drug Administration.</p>
+        <div class="d-flex justify-content-center my-4">
+          <a href="http://www.nitrc.org/projects/firmm/" class="btn btn-lg btn-primary mx-1"><i class="fas fa-download"></i> @ NITRC</a>
+          <a href="http://firmm.readthedocs.io/en/latest/FAQ/" target="_blank" class="btn btn-lg btn-success mx-1"><i class="fas fa-question"></i> FAQ</a>
+          <a href="http://firmm.readthedocs.io/en/latest/" target="_blank" class="btn btn-lg btn-info mx-1"><i class="fas fa-book-open"></i> Docs</a>
+        </div>
+        <p class="subtitle d-flex justify-content-center">If you’re using FIRMM, please cite:</p>
+        <div class="d-flex justify-content-center my-4">
+          <a class="btn btn-secondary mx-1" href="http://www.sciencedirect.com/science/article/pii/S1053811917306729" target="_blank">Paper 1</a>
+          <a class="btn btn-secondary mx-2" href="https://www.sciencedirect.com/science/article/pii/S1053811918300235" target="_blank">Paper 2</a>
+        </div>
+        <p>If you'd like to use FIRMM in a grant proposal, we provide more information in <a href="https://www.nitrc.org/docman/view.php/1144/2257/FIRMM_for_Grants.docx" target="_blank">Word</a> and <a href="https://www.nitrc.org/docman/view.php/1144/2256/FIRMM_for_Grants.pdf" target="_blank">PDF</a> formats.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid section d-flex py-4" id="team">
+    <div class="row align-items-center fill-width my-5">
+      <div class="col-2 offset-1 my-5">
+        <p class="subtitle d-flex justify-content-center sr-class">Our Team</p>
+      </div>
+      <div class="col-8 my-5 sr-class">
+        <p class="subtitle d-flex justify-content-center">Research and Development</p>
+        <div class="row">
+          <div class="col-3">
+            <div class="d-flex justify-content-center">
+              <img class="img-fluid" src="img/portraits/damien_fair.jpg">
+            </div>
+            <p class="text d-flex justify-content-center my-0">Damien Fair</p>
+            <p class="text-muted d-flex justify-content-center">Principal Investigator</p>
+          </div>
+          <div class="col-3">
+            <div class="d-flex justify-content-center">
+              <img class="img-fluid" src="img/portraits/nico_dosenbach.jpg">
+            </div>
+            <p class="text d-flex justify-content-center my-0">Nico Dosenbach</p>
+            <p class="text-muted d-flex justify-content-center">Principal Investigator</p>
+          </div>
+          <div class="col-3">
+            <div class="d-flex justify-content-center">
+              <img class="img-fluid" src="img/portraits/todd_deckard.jpg">
+            </div>
+            <p class="text d-flex justify-content-center my-0">Todd Deckard</p>
+            <p class="text-muted d-flex justify-content-center">Director of Engineering</p>
+          </div>
+          <div class="col-3">
+            <div class="d-flex justify-content-center">
+              <!-- <img class="img-fluid" src="img/portraits/"> -->
+              <i class="fas fa-user" style="font-size: 200px;"></i>
+            </div>
+            <p class="text d-flex justify-content-center my-0">Carolina Badke d'Andrea</p>
+            <p class="text-muted d-flex justify-content-center">Operations Coordinator</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="d-flex justify-content-center">
+              <img class="img-fluid" src="img/portraits/eric_earl.jpg">
+            </div>
+            <p class="text d-flex justify-content-center my-0">Eric Earl</p>
+            <p class="text-muted d-flex justify-content-center">Senior Engineer</p>
+          </div>
+          <div class="col-3">
+            <div class="d-flex justify-content-center">
+              <img class="img-fluid" src="img/portraits/anthony_galassi.jpg">
+            </div>
+            <p class="text d-flex justify-content-center my-0">Anthony Galassi</p>
+            <p class="text-muted d-flex justify-content-center">Engineer</p>
+          </div>
+          <div class="col-3">
+            <div class="d-flex justify-content-center">
+              <img class="img-fluid" src="img/portraits/jon_koller.jpg">
+            </div>
+            <p class="text d-flex justify-content-center my-0">Jon Koller</p>
+            <p class="text-muted d-flex justify-content-center">Senior Engineer</p>
+          </div>
+          <div class="col-3">
+            <div class="d-flex justify-content-center">
+              <img class="img-fluid" src="img/portraits/amy_mirro.jpg">
+            </div>
+            <p class="text d-flex justify-content-center my-0">Amy Mirro</p>
+            <p class="text-muted d-flex justify-content-center">Senior Engineer</p>
+          </div>
+        </div>
+        <p class="subtitle d-flex justify-content-center">Business and Regulatory</p>
+        <div class="row">
+          <div class="col-3">
+            <div class="d-flex justify-content-center">
+              <img class="img-fluid" src="img/portraits/hans_schoepflin.jpeg">
+            </div>
+            <p class="text d-flex justify-content-center my-0">Hans Schoepflin</p>
+            <p class="text-muted d-flex justify-content-center">Co-Founder</p>
+          </div>
+          <div class="col-3">
+            <div class="d-flex justify-content-center">
+              <img class="img-fluid" src="img/portraits/george_kokke.jpg">
+            </div>
+            <p class="text d-flex justify-content-center my-0">George Kokke</p>
+            <p class="text-muted d-flex justify-content-center">Vice President</p>
+          </div>
+          <div class="col-3">
+            <div class="d-flex justify-content-center">
+              <img class="img-fluid" src="img/portraits/jay_miller.jpeg">
+            </div>
+            <p class="text d-flex justify-content-center my-0">Jay Miller</p>
+            <p class="text-muted d-flex justify-content-center">Business Advisor</p>
+          </div>
+          <div class="col-3">
+            <div class="d-flex justify-content-center">
+              <img class="img-fluid" src="img/portraits/lawrence_tanenbaum.png">
+            </div>
+            <p class="text d-flex justify-content-center my-0">Lawrence Tanenbaum</p>
+            <p class="text-muted d-flex justify-content-center">Medical Advisor</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid section d-flex py-4" id="twitter">
+    <div class="row align-items-center fill-width sr-class">
+      <div class="col-6 offset-3">
+        <a class="twitter-timeline" data-height="700" data-theme="dark" href="https://twitter.com/firmmsoftware">Tweets by firmmsoftware</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid section d-flex py-4" id="contact">
+    <div class="row align-items-center fill-width sr-class">
+      <div class="col-6 offset-2">
+        <div class="jumbotron">
+          <p class="title">Contact Us</p>
+          <hr>
+          <p class="subtitle"><a style="color: #337ab7" href="mailto:info@firmm.io">Contact our team</a> with questions, comments, reviews, or information about using FIRMM in grant proposals.</p>
+          <p class="subtitle">You can connect with our team and the FIRMM user community at <a href="https://www.nitrc.org/forum/forum.php?forum_id=7724" style="color: #337ab7">our forum.</a></p>
+          <p class="subtitle">If you're troubleshooting, please check out <a class="page-scroll" style="color: #337ab7" href="http://firmm.readthedocs.io/en/latest/FAQ/">our FAQ</a>.</p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script>
+    // jQuery for page scrolling feature - requires jQuery Easing plugin
+    $(document).on('click', '.ease', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: ($($anchor.attr('href')).offset().top)
+        }, 1250, 'easeInOutExpo');
+        event.preventDefault();
+    });
+    // Scroll Reveal
+    ScrollReveal().reveal('.sr-class', { viewFactor: 0.8, delay: 200 });
+    $('.grid').masonry({
+      itemSelector: '.grid-item', // use a separate class for itemSelector, other than .col-
+      columnWidth: '.grid-sizer',
+      percentPosition: true
+    });
+    ScrollReveal().reveal('.grid-item-content', { viewFactor: 1.0, delay: 500, duration: 2000 });
+  </script>
+</body>
+</html>
