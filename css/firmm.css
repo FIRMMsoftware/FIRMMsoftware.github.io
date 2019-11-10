@@ -28,22 +28,30 @@ body {
   padding-bottom: 0;
 }
 
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
 .nav-link.active {
   color: #222 !important;
   background-color: #DDD;
 }
 
 .title {
-  font-size: 2.5vw;
+  font-size: 2.5rem;
   line-height: 1.25;
 }
 
 .subtitle {
-  font-size: 1.5vw;
+  font-size: 1.5rem;
 }
 
 .text {
-  font-size: 1vw;
+  font-size: 1rem;
+}
+
+.text-muted {
+  font-size: 0.75rem;
 }
 
 .small-text {
@@ -91,7 +99,7 @@ p, li {
 
 .arrow {
   color: #EEE;
-  font-size: 3vw;
+  font-size: 3rem;
 }
 
 .arrow:hover {
@@ -110,6 +118,7 @@ p, li {
 
 .grid-item-content {
   padding: 10px;
+  visibility: hidden;
 }
 
 .alert {
