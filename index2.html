@@ -706,7 +706,7 @@
       event.preventDefault();
     });
     // Scroll Reveal
-    ScrollReveal().reveal('.sr-class', { viewFactor: 0.8, delay: 200 });
+    ScrollReveal().reveal('.sr-class', { viewFactor: 0.6, delay: 200 });
     // only load after images downloaded
     var grid = $('.grid').imagesLoaded().progress(function () {
       // Masonry
@@ -716,7 +716,7 @@
         percentPosition: true
       });
       // reveal grid item content
-      ScrollReveal().reveal('.grid-item-content', { viewFactor: 1.0, delay: 300, duration: 1000 });
+      ScrollReveal().reveal('.grid-item-content', { viewFactor: 0.6, delay: 200, duration: 800 });
     });
   </script>
 </body>
