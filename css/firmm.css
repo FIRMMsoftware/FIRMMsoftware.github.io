@@ -9,8 +9,8 @@ body {
 }
 
 .mid-logo {
-  height: 120px;
-  width: 120px;
+  height: calc(40px + 6vw);
+  width: calc(40px + 6vw);
 }
 
 .mini-logo {
@@ -22,6 +22,7 @@ body {
   text-transform: uppercase;
   font-weight: 300;
   padding-left: 5px !important;
+  font-size: 1rem;
 }
 
 .bg-dark {
@@ -127,7 +128,7 @@ p, li {
 
 .btn-xl {
   padding: 0.9rem 1.8rem;
-  font-size: 3rem;
+  font-size: calc(10px + 3vw);
   line-height: 1.5;
 }
 
@@ -142,4 +143,24 @@ p, li {
 
 .alert {
   border-radius: 0;
+}
+
+.download-pad {
+  padding-top: 7rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.header-scale {
+  letter-spacing: 12px;
+  font-size: calc(30px + 4vw);
+}
+
+.header-center {
+  text-align: center !important;
+}
+
+@media only screen and (min-width: 992px) {
+  .header-center {
+    text-align: inherit !important;
+  }
 }
