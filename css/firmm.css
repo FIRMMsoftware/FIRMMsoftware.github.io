@@ -4,6 +4,12 @@ body {
   position: relative;
 }
 
+.navbar-toggler {
+  border: none;
+  border-radius: 0;
+  border-color: rgba(255,255,255,0);
+}
+
 .large-logo {
   width: 16vw;
 }
