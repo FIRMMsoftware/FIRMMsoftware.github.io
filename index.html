@@ -131,13 +131,13 @@
 
   <div class="container-fluid section py-5" id="download">
     <div class="row download-pad">
-      <div class="col-lg-5 offset-lg-1 col-sm-8 offset-sm-2 col-12 sr-class">
+      <div class="order-1 col-lg-5 offset-lg-1 col-sm-8 offset-sm-2 col-12 sr-class">
         <h1 class="headertitle header-center">
           <span class="header-scale">FIRMM</span>
           <span class="header-scale"><img class="mid-logo" src="img/FIRMM_logo_white_pointer.png"></span>
         </h1>
       </div>
-      <div class="col-lg-5 offset-lg-0 col-10 offset-1 text-center py-4 sr-class">
+      <div class="order-2 col-lg-5 offset-lg-0 col-10 offset-1 text-center py-4 sr-class">
         <a href="http://www.nitrc.org/projects/firmm/" class="btn btn-xl btn-primary mx-1"><i
           class="fas fa-download"></i> v3.2 @ NITRC*</a>
         <div class="row my-1">
@@ -147,15 +147,15 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5 offset-lg-1 col-10 offset-1 sr-class">
+      <div class="order-lg-3 order-4 col-lg-5 offset-lg-1 col-sm-8 offset-sm-2 col-10 offset-1 sr-class">
         <p class="title">What's new in v3.2:</p>
-        <p class="subtitle nomargin">- Full integration with GE Healthcare MRI systems.</p>
-        <p class="subtitle nomargin">- Export motion statistics in CSV format for research and review.</p>
-        <p class="subtitle nomargin">- Support for sessions with variable repetition time (TR) acquisitions.</p>
-        <p class="subtitle nomargin">- Administrator-free installation using Singularity.</p>
-        <p class="subtitle nomargin">- Various backend improvements making motion calculation faster.</p>
+        <p class="subtitle2 nomargin">- Now works with GE scanners in addition to Siemens</p>
+        <p class="subtitle2 nomargin">- Available as a non-admin Singularity container in addition to Docker</p>
+        <p class="subtitle2 nomargin">- Export motion statistics in CSV format</p>
+        <p class="subtitle2 nomargin">- Supports multiple TRs in a single scanning session</p>
+        <p class="subtitle2 nomargin">- Faster motion calculation</p>
       </div>
-      <div class="col-lg-5 offset-lg-0 col-10 offset-1 py-5 sr-class">
+      <div class="order-lg-4 order-3 col-lg-5 offset-lg-0 col-10 offset-1 py-5 sr-class">
         <div class="text-center my-4">
           <a href="http://firmm.readthedocs.io/en/latest/FAQ/" target="_blank" class="btn btn-xl btn-success mx-1"><i
               class="fas fa-question"></i> FAQ</a>
@@ -163,18 +163,20 @@
               class="fas fa-book-open"></i> Docs</a>
         </div>
       </div>
-      <div class="col-10 offset-1 py-5 sr-class">
-        <p class="text-center">If you’re using FIRMM, please cite:</p>
-        <div class="text-center my-3">
-          <a class="btn btn-secondary mx-1" href="https://www.sciencedirect.com/science/article/pii/S1053811917306729"
-            target="_blank">Article 1</a>
-          <a class="btn btn-secondary mx-1" href="https://www.sciencedirect.com/science/article/pii/S1053811918300235"
-            target="_blank">Article 2</a>
+      <div class="order-5 col-10 offset-1 py-5 my-5 small-text sr-class">
+        <div>
+          <p class="text-center">If you’re using FIRMM, please cite:</p>
+          <div class="text-center my-1">
+            <a class="btn btn-secondary mx-1" href="https://www.sciencedirect.com/science/article/pii/S1053811917306729"
+              target="_blank">Article 1</a>
+            <a class="btn btn-secondary mx-1" href="https://www.sciencedirect.com/science/article/pii/S1053811918300235"
+              target="_blank">Article 2</a>
+          </div>
+          <p class="text-center">If you'd like to use FIRMM in a grant proposal, we provide more
+            information in <a href="https://www.nitrc.org/docman/view.php/1144/2257/FIRMM_for_Grants.docx"
+              target="_blank">Word</a> and <a href="https://www.nitrc.org/docman/view.php/1144/2256/FIRMM_for_Grants.pdf"
+              target="_blank">PDF</a> formats.</p>
         </div>
-        <p class="text-center">If you'd like to use FIRMM in a grant proposal, we provide more
-          information in <a href="https://www.nitrc.org/docman/view.php/1144/2257/FIRMM_for_Grants.docx"
-            target="_blank">Word</a> and <a href="https://www.nitrc.org/docman/view.php/1144/2256/FIRMM_for_Grants.pdf"
-            target="_blank">PDF</a> formats.</p>
       </div>
     </div>
   </div>
@@ -184,7 +186,7 @@
       <div class="col-md-5 offset-md-1 col-12 d-flex align-self-center sr-class">
         <img class="img-fluid about-img mx-auto d-block" src="img/low_mover.gif" alt="Low movement subject scan">
       </div>
-      <div class="col-md-5 col-12 d-flex flex-column align-self-center sr-class">
+      <div class="col-md-4 offset-md-1 col-12 d-flex flex-column align-self-center sr-class">
         <p class="subtitle d-flex justify-content-center">Some subjects make it easy to collect high quality data...</p>
         <p class="title text-center animated infinite flash slower"><a class="arrow ease"
             href="#hi"><i class="fas fa-caret-down"></i></a></p>
@@ -194,8 +196,8 @@
       <div class="col-md-5 offset-md-1 col-12 d-flex align-self-center sr-class">
         <img class="img-fluid about-img mx-auto d-block" src="img/high_mover.gif" alt="High movement subject scan">
       </div>
-      <div class="col-md-5 col-12 d-flex flex-column align-self-center sr-class">
-        <p class="subtitle d-flex justify-content-center">... some don't...</p>
+      <div class="col-md-4 offset-md-1 col-12 d-flex flex-column align-self-center sr-class">
+        <p class="subtitle d-flex justify-content-center">...some don't...</p>
         <p class="title text-center animated infinite flash slower"><a class="arrow ease"
             href="#med"><i class="fas fa-caret-down"></i></a></p>
       </div>
@@ -204,25 +206,25 @@
       <div class="col-md-5 offset-md-1 col-12 d-flex align-self-center sr-class">
         <img class="img-fluid about-img mx-auto d-block" src="img/med_mover.gif" alt="Medium movement subject scan">
       </div>
-      <div class="col-md-5 col-12 d-flex flex-column align-self-center sr-class">
-        <p class="subtitle d-flex justify-content-center">... and with most, it's hard to tell just by looking.</p>
+      <div class="col-md-4 offset-md-1 col-12 d-flex flex-column align-self-center sr-class">
+        <p class="subtitle d-flex justify-content-center">...and with most, it's hard to tell just by looking.</p>
         <p class="title text-center animated infinite flash slower"><a class="arrow ease"
             href="#vid1"><i class="fas fa-caret-down"></i></a></p>
       </div>
     </div>
 
     <div class="row fill-height" id="vid1">
-      <div class="order-md-1 order-2 col-md-4 offset-md-1 col-12 d-flex flex-column align-self-center sr-class">
-        <p class="subtitle d-flex justify-content-center">Our software suite allows you to measure data quality in real
-          time, easily, intuitively, and accurately. Here's what you can do with FIRMM.</p>
-        <p class="title text-center animated infinite flash slower"><a class="arrow ease"
-            href="#feature1"><i class="fas fa-caret-down"></i></a></p>
-      </div>
-      <div class="order-md-2 order-1 col-md-5 offset-md-1 col-12 d-flex align-self-center sr-class">
+      <div class="col-md-5 offset-md-1 col-12 d-flex align-self-center sr-class">
         <video class="img-fluid about-img mx-auto d-block" autoplay muted loop>
           <source src="img/FIRMM_video2_baseline.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
+      </div>
+      <div class="col-md-4 offset-md-1 col-12 d-flex flex-column align-self-center sr-class">
+        <p class="subtitle d-flex justify-content-center">Our software suite allows you to measure data quality in real
+          time, easily, intuitively, and accurately. Here's what you can do with FIRMM.</p>
+        <p class="title text-center animated infinite flash slower"><a class="arrow ease"
+            href="#feature1"><i class="fas fa-caret-down"></i></a></p>
       </div>
     </div>
 
@@ -238,20 +240,20 @@
       </div>
     </div>
     <div class="row fill-height" id="feature2">
-      <div class="order-md-1 order-2 col-md-5 offset-md-1 col-12 d-flex flex-column align-self-center sr-class">
+      <div class="col-md-5 offset-md-1 col-12 d-flex align-self-center justify-content-center sr-class">
+        <img class="img-fluid about-img mx-auto d-block" src="img/collected_low_movement_table.png" alt="Collected low movement table">
+      </div>
+      <div class="col-md-4 offset-md-1 col-12 d-flex flex-column align-self-center sr-class">
         <p class="subtitle d-flex justify-content-center">See the quality of your data at a glance.</p>
         <p class="title text-center animated infinite flash slower"><a class="arrow ease"
             href="#feature3"><i class="fas fa-caret-down"></i></a></p>
-      </div>
-      <div class="order-md-2 order-1 col-md-5 col-12 d-flex align-self-center justify-content-center sr-class">
-        <img class="img-fluid about-img mx-auto d-block" src="img/collected_low_movement_table.png" alt="Collected low movement table">
       </div>
     </div>
     <div class="row fill-height" id="feature3">
       <div class="col-md-5 offset-md-1 col-12 d-flex align-self-center justify-content-center sr-class">
         <img class="img-fluid about-img mx-auto d-block" src="img/predicted_table.png" alt="FIRMM prediction table">
       </div>
-      <div class="col-md-5 col-12 d-flex flex-column align-self-center sr-class">
+      <div class="col-md-4 offset-md-1 col-12 d-flex flex-column align-self-center sr-class">
         <p class="subtitle d-flex justify-content-center">Predict how much scan time it will take to collect all the
           quality data you need.</p>
         <p class="title text-center animated infinite flash slower"><a class="arrow ease"
@@ -259,13 +261,13 @@
       </div>
     </div>
     <div class="row fill-height" id="feature4">
-      <div class="order-md-1 order-2 col-md-5 offset-md-1 col-12 d-flex flex-column align-self-center sr-class">
+      <div class="col-md-5 offset-md-1 col-12 d-flex align-self-center justify-content-center sr-class">
+        <img class="img-fluid about-img mx-auto d-block" src="img/progress_to_criteria.png" alt="Progress to scanning criteria">
+      </div>
+      <div class="col-md-4 offset-md-1 col-12 d-flex flex-column align-self-center sr-class">
         <p class="subtitle d-flex justify-content-center">Stop scanning when your goals are met.</p>
         <p class="title text-center animated infinite flash slower"><a class="arrow ease"
             href="#vid2"><i class="fas fa-caret-down"></i></a></p>
-      </div>
-      <div class="order-md-2 order-1 col-md-5 col-12 d-flex align-self-center justify-content-center sr-class">
-        <img class="img-fluid about-img mx-auto d-block" src="img/progress_to_criteria.png" alt="Progress to scanning criteria">
       </div>
     </div>
 
@@ -533,10 +535,7 @@
 
   <div class="container-fluid section d-flex py-5" id="team">
     <div class="row align-items-center fill-width my-5">
-      <div class="col-md-3 offset-md-1 col-12">
-        <p class="subtitle text-center">Our Team</p>
-      </div>
-      <div class="col-md-7 col-12">
+      <div class="col-md-10 offset-md-1 col-12 offset-0">
         <p class="subtitle text-center">NOUS Imaging Team</p>
         <div class="row">
           <div class="col-xl-2 offset-xl-1 col-md-4 col-sm-6 col-12 sr-class">
@@ -550,14 +549,14 @@
             <div class="text-center">
               <img class="img-fluid" src="img/portraits/damien_fair.jpg">
             </div>
-            <p class="text text-center my-0">Damien Fair</p>
+            <p class="text text-center my-0">Damien Fair, PhD</p>
             <p class="text-muted text-center">Co-Founder</p>
           </div>
           <div class="col-xl-2 col-md-4 col-sm-6 col-12 sr-class">
             <div class="text-center">
               <img class="img-fluid" src="img/portraits/nico_dosenbach.jpg">
             </div>
-            <p class="text text-center my-0">Nico Dosenbach</p>
+            <p class="text text-center my-0">Nico Dosenbach, MD, PhD</p>
             <p class="text-muted text-center">Co-Founder</p>
           </div>
           <div class="col-xl-2 offset-xl-0 col-md-4 offset-md-2 col-sm-6 offset-sm-0 col-12 offset-0 sr-class">
@@ -565,7 +564,7 @@
               <img class="img-fluid" src="img/portraits/george_kokke.jpg">
             </div>
             <p class="text text-center my-0">George Kokke</p>
-            <p class="text-muted text-center">CFO</p>
+            <p class="text-muted text-center">Chief Financial Officer</p>
           </div>
           <div class="col-xl-2 offset-xl-0 col-md-4 offset-md-0 col-sm-6 offset-sm-0 col-12 offset-0 sr-class">
             <div class="text-center">
@@ -604,16 +603,16 @@
           </div>
           <div class="col-xl-2 col-md-4 col-sm-6 col-12 sr-class">
             <div class="text-center">
-              <img class="img-fluid" src="img/portraits/anthony_galassi.jpg">
-            </div>
-            <p class="text text-center my-0">Anthony Galassi</p>
-            <p class="text-muted text-center">Engineer</p>
-          </div>
-          <div class="col-xl-2 col-md-4 col-sm-6 col-12 sr-class">
-            <div class="text-center">
               <img class="img-fluid" src="img/portraits/hasmik_grigoryan.jpg">
             </div>
             <p class="text text-center my-0">Hasmik Grigoryan</p>
+            <p class="text-muted text-center">Senior Engineer</p>
+          </div>
+          <div class="col-xl-2 col-md-4 col-sm-6 col-12 sr-class">
+            <div class="text-center">
+              <img class="img-fluid" src="img/portraits/anthony_galassi.jpg">
+            </div>
+            <p class="text text-center my-0">Anthony Galassi</p>
             <p class="text-muted text-center">Engineer</p>
           </div>
         </div>
@@ -623,21 +622,21 @@
             <div class="text-center">
               <img class="img-fluid" src="img/portraits/lawrence_tanenbaum.png">
             </div>
-            <p class="text text-center my-0">Lawrence Tanenbaum</p>
+            <p class="text text-center my-0">Lawrence Tanenbaum, MD</p>
             <p class="text-muted text-center">Medical Advisor</p>
           </div>
           <div class="col-xl-2 col-md-4 col-sm-6 col-12 sr-class">
             <div class="text-center">
               <img class="img-fluid" src="img/portraits/robert_mckinstry.png">
             </div>
-            <p class="text text-center my-0">Robert Mckinstry</p>
+            <p class="text text-center my-0">Robert Mckinstry, MD, PhD</p>
             <p class="text-muted text-center">Medical Advisor</p>
           </div>
           <div class="col-xl-2 col-md-4 col-sm-6 col-12 sr-class">
             <div class="text-center">
               <img class="img-fluid" src="img/portraits/andre_van_der_kouwe.jpg">
             </div>
-            <p class="text text-center my-0">Andre van der Kouwe</p>
+            <p class="text text-center my-0">Andre van der Kouwe, PhD</p>
             <p class="text-muted text-center">Scientific Advisor</p>
           </div>
           <div class="col-xl-2 col-md-4 col-sm-6 col-12 sr-class">

@@ -59,11 +59,15 @@ body {
 }
 
 .subtitle {
-  font-size: 1.5rem;
+  font-size: calc(1vw + 12px);
+}
+
+.subtitle2 {
+  font-size: calc(0.5vw + 12px);
 }
 
 .text {
-  font-size: 1rem;
+  font-size: calc(0.25vw + 14px);
 }
 
 .nomargin {
@@ -71,11 +75,12 @@ body {
 }
 
 .text-muted {
-  font-size: 0.75rem;
+  font-size: calc(0.25vw + 12px);
 }
 
 .small-text {
-  font-size: 10px;
+  font-size: calc(0.25vw + 10px);
+  margin-bottom: 0;
 }
 
 .jumbotron {
