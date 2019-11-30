@@ -96,7 +96,7 @@
           $(".close-video").fadeIn();
         };
         function stop_video() {
-          $(".header-video").prop("muted",true).prop("loop",true).css("height","auto").trigger("play").css("max-height","inherit").css("max-width","inherit").addClass("mobile-video");
+          $(".header-video").prop("muted",true).prop("loop",true).trigger("play").css("max-height","unset").css("max-width","unset").addClass("mobile-video");
           $(".navbar").fadeIn();
           $(".overlay").fadeIn();
           $(".overlay-container").fadeIn();
@@ -135,7 +135,7 @@
               </div>
               <div class="row">
                 <div class="col-12 text-center">
-                  <p class="my-1">Going to RSNA? Come by our booth</p>
+                  <p class="my-1">Going to RSNA? Come by our booth: <a href="http://rsna2019.mapyourshow.com/8_0/floorplan/?hallID=B&selectedBooth=2468-C5&shareguid=00140F1B-B68D-332E-2F466A75D901F319">2468-C5</a></p>
                   <a href="http://rsna2019.mapyourshow.com/8_0/floorplan/?hallID=B&selectedBooth=2468-C5&shareguid=00140F1B-B68D-332E-2F466A75D901F319" class="ease animated fadeIn slow my-2 mx-1"><img class="img-fluid" src="img/RSNA_LH.jpg"></a>
                 </div>
               </div>

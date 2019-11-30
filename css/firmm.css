@@ -176,6 +176,7 @@ p, li {
 
 .header-video {
   position: absolute;
+  background-color: #000;
   top: 50%;
   left: 50%;
   min-width: 100%;
@@ -226,14 +227,15 @@ p, li {
 }
 
 /* Disables video on mobile */
-@media (pointer: coarse) and (hover: none) {
+/* @media (pointer: coarse) and (hover: none) {
   .blurb {
     background: #222222 no-repeat center center scroll;
   }
   .mobile-video {
     display: none;
   }
-}
+} */
+/* Commenting out becomes Nico requested it */
 
 @media only screen and (min-width: 992px) {
   .header-center {
