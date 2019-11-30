@@ -15,8 +15,8 @@ body {
 }
 
 .mid-logo {
-  height: calc(40px + 6vw);
-  width: calc(40px + 6vw);
+  height: calc(30px + 6vw);
+  width: calc(30px + 6vw);
 }
 
 .mini-logo {
@@ -157,8 +157,8 @@ p, li {
 }
 
 .download-pad {
-  padding-top: 7rem !important;
-  padding-bottom: 3rem !important;
+  padding-top: 20vh !important;
+  padding-bottom: 20vh !important;
 }
 
 .header-scale {
@@ -172,6 +172,67 @@ p, li {
 
 .about-img {
   max-height: 40vh;
+}
+
+.header-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.overlay-container {
+  position: relative;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #222222;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.close-video {
+  position: absolute;
+  font-size: 2rem;
+  top: 0.25rem;
+  left: 1rem;
+  z-index: 3;
+}
+
+.informational {
+  position: absolute;
+  top: 3rem;
+  left: 1rem;
+  border: black;
+  z-index: 4;
+}
+
+.hide-section {
+  display: none !important;
+}
+
+/* Disables video on mobile */
+@media (pointer: coarse) and (hover: none) {
+  .blurb {
+    background: #222222 no-repeat center center scroll;
+  }
+  .mobile-video {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 992px) {
